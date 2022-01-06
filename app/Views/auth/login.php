@@ -41,7 +41,7 @@
                                 <button class="btn btn-primary btn-block" type="submit">Sign In</button>
                             </div>
                             <br>
-                            <a href="<?= site_url('auth/register'); ?>">Have no Account, create new account</a>
+                            <a href="<?= site_url('Auth/register'); ?>">Have no Account, create new account</a>
                         </form>
                     </div>
                 </div>

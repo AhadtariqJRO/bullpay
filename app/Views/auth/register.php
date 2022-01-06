@@ -68,7 +68,7 @@
                                 <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
                             </div>
                             <br>
-                            <a href="<?= site_url('auth'); ?>">I already have account, login now</a>
+                            <a href="<?= site_url('Auth'); ?>">I already have account, login now</a>
                         </div>
 
                     </form>

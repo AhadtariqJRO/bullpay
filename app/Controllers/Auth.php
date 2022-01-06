@@ -123,11 +123,12 @@ class Auth extends Controller{
         ]);
 
         if(!$validation){
-            return view('auth/register', ['validation'=>$this->validator]);
+            return view('Auth/register', ['validation'=>$this->validator]);
         }else{
             //Registering users into Database
             $name = $this->request->getPost('name');
             $pnumber = $this->request->getPost('phone_number');
+
             $status = $this->request->getPost('status');
             $password = $this->request->getPost('password');
 
@@ -153,7 +154,7 @@ class Auth extends Controller{
                 return redirect()->back()->with('fail', 'Something went wrong');
             }else{
 //                print_r($values);die;
-                return redirect()->to('auth')->with('success', 'You are now registered successfully');
+                return redirect()->to('Auth')->with('success', 'You are now registered successfully');
 
                 //if we want to redirect user direct to dashboard after sign Up
                 //$last_id = $usersModel->insertID();
