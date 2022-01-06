@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/ci4/public/';
+    public $baseURL = 'http://localhost/bullpay/public/';
 
     /**
      * --------------------------------------------------------------------------
