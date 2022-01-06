@@ -27,14 +27,14 @@ class Auth extends Controller{
         //Lets start validation
         //These are custome validations for Pak Number and password
         $validation = $this->validate([
-            'pak_number'=>[
-                'rules'=>'required|integer|is_not_unique[users.pak_number]|min_length[5]|max_length[8]',
+            'phone_number'=>[
+                'rules'=>'required|integer|is_not_unique[users.phone_number]|min_length[6]|max_length[11]',
                 'errors'=>[
-                    'required'=>'Pak Number is required',
-                    'integer'=> 'Enter a valid Pak Number',
-                    'is_not_unique'=>'This Pak_Number is not registered on our service',
-                    'min_length'=>'Password must have atleast 5 digits in length',
-                    'max_length'=>'Password must not have more than 8 digits in length'
+                    'required'=>'Phone Number is required',
+                    'integer'=> 'Enter a valid Phone Number',
+                    'is_not_unique'=>'This Phone_Number is not registered on our service',
+                    'min_length'=>'Password must have atleast 6 digits in length',
+                    'max_length'=>'Password must not have more than 11 digits in length'
                 ]
             ],
             'password'=>[
@@ -54,10 +54,10 @@ class Auth extends Controller{
 
             //Lets check user
 
-            $pnumber  = $this->request->getPost('pak_number');
+            $pnumber  = $this->request->getPost('phone_number');
             $password = $this->request->getPost('password');
             $usersModel = new \App\Models\UsersModel();
-            $user_info = $usersModel->where('pak_number', $pnumber)->first();
+            $user_info = $usersModel->where('phone_number', $pnumber)->first();
             $check_password = Hash::check($password, $user_info['password']);
 
 //            print_r($user_info);
@@ -94,13 +94,13 @@ class Auth extends Controller{
                     'required'=>'Your full name is required'
                 ]
             ],
-            'pak_number'=>[
-                'rules'=>'required|integer|min_length[5]|max_length[8]',
+            'phone_number'=>[
+                'rules'=>'required|integer|min_length[6]|max_length[11]',
                 'errors'=>[
-                    'required'=>'Pak Number is required',
-                    'integer'=> 'Enter a valid Pak Number',
-                    'min_length'=>'Pak-Number must have atleast 5 digits in length',
-                    'max_length'=>'Pak-Number must not have more than 8 digits in length'
+                    'required'=>'Phone Number is required',
+                    'integer'=> 'Enter a valid Phone Number',
+                    'min_length'=>'Phone-Number must have atleast 6 digits in length',
+                    'max_length'=>'Phone-Number must not have more than 11 digits in length'
                 ]
             ],
             'password'=>[
@@ -127,14 +127,14 @@ class Auth extends Controller{
         }else{
             //Registering users into Database
             $name = $this->request->getPost('name');
-            $pnumber = $this->request->getPost('pak_number');
-            $designation = $this->request->getPost('designation');
+            $pnumber = $this->request->getPost('phone_number');
+            $status = $this->request->getPost('status');
             $password = $this->request->getPost('password');
 
             $values = [
                 'name'=>$name,
-                'pak_number'=>$pnumber,
-                'designation'=>$designation,
+                'phone_number'=>$pnumber,
+                'status'=>$status,
                 'password'=>Hash::make($password),
             ];
 
