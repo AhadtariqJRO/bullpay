@@ -28,8 +28,8 @@
                             <?php endif ?>
                             <div class="form-group">
                                 <label for="">PHONE Number</label>
-                                <input type="number" class="form-control" name="phone_number" placeholder="Enter your Pak Number" value="<?= set_value('pak_number') ?>">
-                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'pak_number') : '' ?></span>
+                                <input type="number" class="form-control" name="phone_number" placeholder="Enter your Phone Number" value="<?= set_value('phone_number') ?>">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone_number') : '' ?></span>
                             </div>
                             <div class="form-group">
                                 <label for="">Password</label>

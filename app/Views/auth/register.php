@@ -25,7 +25,7 @@
                                 <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
                             <?php endif  ?>
 
-                            <h2 class="mb-5 text-center">CEA <br> Attendence System</h2>
+                            <h2 class="mb-5 text-center">BULLPAY GLOBAL <br> Welcome</h2>
                             <hr class="my-4">
                             <h4>Sign Up</h4><hr>
                             <div class="form-group">
@@ -34,18 +34,22 @@
                                 <span class="text-danger"><?= isset($validation)? display_error($validation, 'name') : '' ?></span>
                             </div>
                             <div class="form-group">
-                                <label for="">Pak Number</label>
-                                <input type="number" class="form-control" name="pak_number" placeholder="Enter your Pak Number" value="<?= set_value('Pak_Number') ?>">
-                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'pak_number') : '' ?></span>
+                                <label for="">Phone Number</label>
+                                <input type="number" class="form-control" name="phone_number" placeholder="Enter your Phone Number" value="<?= set_value('Phone_Number') ?>">
+                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone_number') : '' ?></span>
                             </div>
                             <div class="form-group mb-4">
-                                <label class="form-label" for="">Designation</label><br>
-                                <select id="rank" name="designation"  style="height: 50px ; width: 100% ; border-radius: 2px">
-                                    <option value="" disabled selected hidden>Choose Your Rank</option>
-                                    <option value="D1">Supervisor</option>
-                                    <option value="D2">Staff Officer</option>
-                                    <option value="D3">JRO</option>
-                                    <option value="D4">RO</option>
+                                <label class="form-label" for="">status</label><br>
+                                <select id="rank" name="status"  style="height: 50px ; width: 100% ; border-radius: 2px">
+                                    <option value="" disabled selected hidden>Choose Your Status</option>
+                                    <option value="D1">Beginner</option>
+                                    <option value="D2">VIP 1</option>
+                                    <option value="D3">VIP 2</option>
+                                    <option value="D4">VIP 3</option>
+                                    <option value="D5">VIP 4</option>
+                                    <option value="D6">VIP 5</option>
+                                    <option value="D7">VIP 6</option>
+                                    <option value="D8">VIP 7</option>
                                 </select>
                             </div>
                             <div class="form-group">
