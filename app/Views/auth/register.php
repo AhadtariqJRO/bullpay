@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .vh-100 {
+            background: url(../abc.png) repeat-y center fixed;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            display: inline-table;
+            background-position: 100% 100%;
+            padding-bottom: 10px;
+            font-size: 14px;
+            padding: 0px 35px 0;
+        }
 
+    </style>
 </head>
 <body style="background-color: #508bfc;">
 <section class="vh-100">
