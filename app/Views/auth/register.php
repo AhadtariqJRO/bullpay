@@ -7,11 +7,11 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
-        .vh-100 {
-            background: url(../auth/bbb.jpg) repeat-y center fixed;
+        .image-bull {
+            background: url(../bbb.jpg) repeat-y center fixed;
             background-size: cover;
-            height: 100vh;
-            width: 100%;
+            height: 100px;
+            width: 100px;
             display: inline-table;
             background-position: 100% 100%;
             padding-bottom: 10px;
@@ -22,14 +22,14 @@
     </style>
 
 </head>
-<body style="background-color: #f8bdb9; font-family: Poppins-Medium;">
-<section class="vh-100">
+<body style="background-color:#03103c; font-family: Poppins-Medium;">
+<section class="vh-100" >
     <div class="container py-5 h-100" >
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="card shadow-2-strong" style="border-radius: 1rem;">
 
-                    <form action="<?= base_url('auth/save') ?>" method="post" autocomplete="off">
+                    <form action="<?= base_url('auth/save') ?>" method="post" autocomplete="off" style="background-color:#03103c; font-family: Poppins-Medium;">
                         <div class="card-body p-4">
                             <?= csrf_field() ?>
                             <?php if(!empty(session()->getFlashdata('fail'))) : ?>
@@ -38,10 +38,12 @@
                             <?php if(!empty(session()->getFlashdata('success'))) : ?>
                                 <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
                             <?php endif  ?>
+                            <div class="image-bull">
 
-                            <h2 class="mb-5 text-center">BULLPAY GLOBAL <br> Welcome</h2>
+                            </div>
+                            <h2 class="mb-5 text-center" style="color: white">BULL GLOBAL <br> Welcome</h2>
                             <hr class="my-4">
-                            <h4>Sign Up</h4><hr>
+                            <h4 style="color: white">Sign Up</h4><hr>
                             <div class="form-group">
 <!--                                <label for="">Name</label>-->
                                 <input type="text" class="form-control" name="name" placeholder="Enter full name" value="<?= set_value('name'); ?>" style="border-radius: 2rem; height: 50px">
@@ -78,8 +80,8 @@
                                 <span class="text-danger"><?= isset($validation)? display_error($validation, 'cpassword') : '' ?></span>
 
                             </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block" type="submit" style="border-radius: 2rem; height: 50px; background: #b4ddd7 ">Sign Up</button>
+                            <div class="form-group" >
+                                <button class="btn btn-primary btn-block" type="submit" style="border-radius: 2rem; height: 50px; background: #03103c ">Sign Up</button>
                             </div>
                             <br>
                             <a href="<?= site_url('Auth'); ?>">I already have account, login now</a>

@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="" class="nav-link">VIP</a>
+                <a href="<?= site_url('VipController');?>" class="nav-link">VIP</a>
             </li>
             <li>
                 <a href="" class="nav-link">Profit</a>
