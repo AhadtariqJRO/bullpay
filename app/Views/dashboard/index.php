@@ -38,41 +38,88 @@
         <!--            <div class="col-md-4"></div>-->
         <!--            <div class="col-md-4 col-md-offset-4">-->
         <div class="col-lg-12">
-            <h4><?= $title; ?></h4>
+            <h4>Welcome to the <?= $title; ?></h4>
             <hr>
-            <table>
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Pak Number</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <?php
-                $loggedUserID = session()->get('loggedUser');
-
-                if ($loggedUserID == '16'):?>
-                    <h1>Admin</h1>
+<!--            <table>-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th>Name</th>-->
+<!--                    <th>Membership Number</th>-->
+<!--                    <th></th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                --><?php
+//                $loggedUserID = session()->get('loggedUser');
+//
+//                if ($loggedUserID == '16'):?>
+<!--                    <h1>Admin</h1>-->
                     <!--                    <a href="--><?//= site_url('Listing/datafetching') ?><!--" class="btn btn-primary mb-2" data-toggle="modal" data-target="#markAttendance" id="addAttendance">-->
                     <!--                        Mark Attendance-->
                     <!--                    </a>-->
-                    <a href="<?= site_url('Listing/dataFetching')?>">
-                        <button class="btn btn-primary mb-2">Mark Attendance</button>
-                    </a>
-                    <a href="<?= site_url('Listing/fetchFromDatabase') ?>">
-                        <button class="btn btn-success mb-2">View Today's Attendance</button>
-                    </a>
-                    <a href="<?= site_url('Listing/monthdata') ?>">
-                        <button class="btn btn-success mb-2">View Monthly Attendance</button>
-                    </a>
-                <?php endif; ?>
+<!--                    <a href="--><?//= site_url('Listing/dataFetching')?><!--">-->
+<!--                        <button class="btn btn-primary mb-2">Mark Attendance</button>-->
+<!--                    </a>-->
+<!--                    <a href="--><?//= site_url('Listing/fetchFromDatabase') ?><!--">-->
+<!--                        <button class="btn btn-success mb-2">View Today's Attendance</button>-->
+<!--                    </a>-->
+<!--                    <a href="--><?//= site_url('Listing/monthdata') ?><!--">-->
+<!--                        <button class="btn btn-success mb-2">View Monthly Attendance</button>-->
+<!--                    </a>-->
+<!--                --><?php //endif; ?>
+<!--                <tbody>-->
+<!--                <tr>-->
+<!--                    <td>--><?//= ucfirst($userInfo['name']); ?><!--</td>-->
+<!--                    <td>--><?//= $userInfo['phone_number']; ?><!--</td>-->
+<!--                    <td><a href="--><?//= site_url('auth/logout'); ?><!--">Logout</a></td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+            <table class="table table-striped  table-light">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of Completion</th>
+                    <th>Referral Award</th>
+                </tr>
+                </thead>
                 <tbody>
                 <tr>
-                    <td><?= ucfirst($userInfo['name']); ?></td>
-                    <td><?= $userInfo['phone_number']; ?></td>
-                    <td><a href="<?= site_url('auth/logout'); ?>">Logout</a></td>
+                    <td>Person 1</td>
+                    <td>5 Lists</td>
+                    <td>6660NGN</td>
+                </tr>
+                <tr>
+                    <td>Person 2</td>
+                    <td>51 Lists</td>
+                    <td>850NGN</td>
+                </tr>
+                <tr>
+                    <td>Person 3</td>
+                    <td>23 Lists</td>
+                    <td>700NGN</td>
+                </tr>
+                <tr>
+                    <td>Person 4</td>
+                    <td>16 Lists</td>
+                    <td>50NGN</td>
+                </tr>
+                <tr>
+                    <td>Person 5</td>
+                    <td>63 Lists</td>
+                    <td>5000NGN</td>
+                </tr>
+                <tr>
+                    <td>Person 6</td>
+                    <td>5 Lists</td>
+                    <td>2000NGN</td>
+                </tr>
+                <tr>
+                    <td>Person 7</td>
+                    <td>56 Lists</td>
+                    <td>2000NGN</td>
                 </tr>
                 </tbody>
+
             </table>
             <!--                    <div class="btn btn-success">-->
             <!--                        <button>Mark today's attendance</button>-->
