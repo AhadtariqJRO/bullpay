@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        .image-bull {
-            background: url(../bbb.jpg) repeat-y center fixed;
-            background-size: cover;
-            height: 100px;
-            width: 100px;
-            display: inline-table;
-            background-position: 100% 100%;
-            padding-bottom: 10px;
-            font-size: 14px;
-            padding: 0px 35px 0;
-        }
-
-    </style>
+<!--    <style>-->
+<!--        .image-bull {-->
+<!--            background: url(../bbb.jpg) repeat-y center fixed;-->
+<!--            background-size: cover;-->
+<!--            height: 100px;-->
+<!--            width: 100px;-->
+<!--            display: inline-table;-->
+<!--            background-position: 100% 100%;-->
+<!--            padding-bottom: 10px;-->
+<!--            font-size: 14px;-->
+<!--            padding: 0px 35px 0;-->
+<!--        }-->
+<!---->
+<!--    </style>-->
 
 </head>
-<body style="background-color:#03103c; font-family: Poppins-Medium;">
+<body style="background: url(../bbb.jpg) repeat-y center fixed; font-family: Poppins-Medium;">
 <section class="vh-100" >
     <div class="container py-5 h-100" >
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -38,10 +38,12 @@
                             <?php if(!empty(session()->getFlashdata('success'))) : ?>
                                 <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
                             <?php endif  ?>
-                            <div class="image-bull">
-
+                            <div class="image-bull" style="background:url(../bull.jpeg); align-self: center; width: 20%">
+                                            <h1>dfbjh</h1>
                             </div>
-                            <h2 class="mb-5 text-center" style="color: white">BULL GLOBAL <br> Welcome</h2>
+                            <h2 class="mb-5 text-center" style="color: white">
+<!--                                BULL GLOBAL-->
+                                <br> Welcome</h2>
                             <hr class="my-4">
                             <h4 style="color: white">Sign Up</h4><hr>
                             <div class="form-group">
@@ -84,7 +86,7 @@
                                 <button class="btn btn-primary btn-block" type="submit" style="border-radius: 2rem; height: 50px; background: #03103c ">Sign Up</button>
                             </div>
                             <br>
-                            <a href="<?= site_url('Auth'); ?>">I already have account, login now</a>
+                            <a href="<?= site_url('auth'); ?>">I already have account, login now</a>
                         </div>
 
                     </form>

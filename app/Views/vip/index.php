@@ -81,6 +81,5 @@
             <p class="card-text" style="text-align: right">Date:</p>
         </div>
     </div>
-
 </div>
 </body>
