@@ -51,11 +51,22 @@
                             <?php if (!empty(session()->getFlashdata('fail'))) : ?>
                                 <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
                             <?php endif ?>
-                            <div class="form-group">
+                            <div class="form-group row" >
 <!--                                <label for="">Phone Number</label>-->
-                                <input type="number" class="form-control" name="phone_number"
-                                       placeholder="Enter your Phone Number" value="<?= set_value('phone_number') ?>" style="border-radius: 2rem; height: 50px">
-                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone_number') : '' ?></span>
+                                <div class="col-1" style="">
+                                    <select name="" id="" style="border-radius: 2rem; height: 50px">
+                                        <option value="+234">+234</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="col-11" style="">
+                                    <input type="number" class="form-control" name="phone_number"
+                                           placeholder="Enter your Phone Number" value="<?= set_value('phone_number') ?>" style="border-radius: 2rem; height: 50px">
+                                    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone_number') : '' ?></span>
+                                </div>
+
                             </div>
                             <div class="form-group">
 <!--                                <label for="">Password</label>-->

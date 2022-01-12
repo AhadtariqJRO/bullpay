@@ -57,26 +57,37 @@
                                        value="<?= set_value('name'); ?>" style="border-radius: 2rem; height: 50px">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'name') : '' ?></span>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group  row" >
                                 <!--                                <label for="">Phone Number</label>-->
-                                <input type="number" class="form-control" name="phone_number"
-                                       placeholder="Enter your Phone Number" value="<?= set_value('Phone_Number') ?>"
-                                       style="border-radius: 2rem; height: 50px">
-                                <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone_number') : '' ?></span>
+                                <div class="col-1" style="">
+                                    <select name="" id="" style="border-radius: 2rem; height: 50px">
+                                        <option value="+234">+234</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="col-11" style="">
+                                    <input type="number" class="form-control" name="phone_number"
+                                           placeholder="Enter your Phone Number" value="<?= set_value('Phone_Number') ?>"
+                                           style="border-radius: 2rem; height: 50px">
+                                    <span class="text-danger"><?= isset($validation) ? display_error($validation, 'phone_number') : '' ?></span>
+                                </div>
+
                             </div>
                             <div class="form-group mb-4">
                                 <!--                                <label class="form-label" for="">status</label><br>-->
                                 <select id="rank" name="status"
                                         style="height: 50px ; width: 100% ; border-radius: 2rem">
                                     <option value="" disabled selected hidden>Choose Your Status</option>
-                                    <option value="D1">Beginner</option>
-                                    <option value="D2">VIP 1</option>
-                                    <option value="D3">VIP 2</option>
-                                    <option value="D4">VIP 3</option>
-                                    <option value="D5">VIP 4</option>
-                                    <option value="D6">VIP 5</option>
-                                    <option value="D7">VIP 6</option>
-                                    <option value="D8">VIP 7</option>
+                                    <option value="B">Beginner</option>
+                                    <option value="v1">VIP 1</option>
+                                    <option value="v2">VIP 2</option>
+                                    <option value="v3">VIP 3</option>
+                                    <option value="v4">VIP 4</option>
+                                    <option value="v5">VIP 5</option>
+                                    <option value="v6">VIP 6</option>
+                                    <option value="v7">VIP 7</option>
                                 </select>
                             </div>
                             <div class="form-group">
