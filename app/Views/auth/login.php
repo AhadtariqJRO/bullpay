@@ -33,8 +33,16 @@
             <div class="col-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="card shadow-2-strong" style="border-radius: 1rem;">
                     <div class="card-body p-5">
+                        <div class="" style="text-align: center">
+                            <!--                        <img src="--><?//= base_url('bull.jpg') ?><!--" width="150px" height="150px" style="border-radius: 50%">-->
+                            <!--                        <img src="--><?//= base_url('bull1.png') ?><!--" width="150px" height="150px" style="border-radius: 50%">-->
+                            <img src="<?= base_url('bull2.jpg') ?>" width="150px" height="150px" style="border-radius: 50%">
+
+                        </div>
                         <form action="<?= base_url('auth/check') ?>" method="post" autocomplete="off">
-                            <h2 class="mb-5 text-center">BULLPAY GLOBAL <br> Welcome</h2>
+                            <h2 class="mb-5 text-center">
+<!--                                BULLPAY GLOBAL-->
+                                <br> Welcome</h2>
                             <hr class="my-4">
 
                             <h3 class="mb-2">Sign in</h3>
@@ -54,7 +62,9 @@
                                 <input type="password" class="form-control" name="password"
                                        placeholder="Enter password" style="border-radius: 2rem; height: 50px">
                                 <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
-
+                                <div style="text-align: right">
+                                    <a href="<?= site_url('#')?>">Forget Password</a>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary btn-block" type="submit" style="border-radius: 2rem; height: 50px; background: #f8bdb9">Sign In</button>
