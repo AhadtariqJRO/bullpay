@@ -47,8 +47,6 @@ $routes->group('', ['filter'=>'AlreadyLoggedIn'], function($routes){
     $routes->get('/auth/register', 'Auth::register');
 });
 
-$routes->get('','');
-
 
 /*
  * --------------------------------------------------------------------
