@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="" class="nav-link">Mining Pool</a>
+                <a href="<?= base_url('dashboard/goToMiningScreen')?>" class="nav-link">Mining Pool</a>
             </li>
             <li>
                 <a href="" class="nav-link">Profit</a>

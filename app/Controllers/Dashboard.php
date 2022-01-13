@@ -29,4 +29,8 @@ class Dashboard extends BaseController
         ];
         return view('dashboard/index', $data);
     }
+
+    function goToMiningScreen(){
+        return view('miningPool/index');
+    }
 }
