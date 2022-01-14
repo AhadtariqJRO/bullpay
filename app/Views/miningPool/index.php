@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark bg-success fixed-bottom" style="background-image: linear-gradient(to right, rgba(100,75,80,1), rgba(47,75,80,1));" >
+<nav class="navbar navbar-expand-sm navbar-dark bg-success fixed-bottom" style="" >
     <a href="<?= base_url('dashboard/index') ?>" class="navbar-brand">
         <i class="fa fa-fw fa-home"></i>Home</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#">
