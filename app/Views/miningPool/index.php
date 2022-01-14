@@ -21,16 +21,20 @@
     <div class="collapse navbar-collapse" id="">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="#" class="nav-link">Mining Pool</a>
+                <a href="#" class="nav-link">
+                    <i class="fa fa-fw fa-book"></i>Mining Pool</a>
             </li>
             <li>
-                <a href="" class="nav-link">Profit</a>
+                <a href="" class="nav-link">
+                    <i class="fa fa-fw fa-money"></i>Profit</a>
             </li>
             <li>
-                <a href="" class="nav-link">My Wallet</a>
+                <a href="" class="nav-link">
+                    <i class="fa fa-fw fa-google-wallet"></i>My Wallet</a>
             </li>
             <li>
-                <a href="<?= site_url('auth/logout'); ?>" class="nav-link">Logout</a>
+                <a href="<?= site_url('auth/logout'); ?>" class="nav-link">
+                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
             </li>
         </ul>
     </div>
